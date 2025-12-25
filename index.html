@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siya Verma Profile</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- Global Variables & Reset --- */
+    :root {
+      --primary-cyan: #00eaff;
+      --secondary-cyan: #00c9e6;
+      --bg-dark: #000000;
+      --bg-card: #111111;
+      --text-light: #e0f7fa;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Poppins', sans-serif; /* Unified Font */
+      overflow-x: hidden;
+    }
+
+    /* --- Navbar Styling --- */
+    .navbar {
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 234, 255, 0.1);
+    }
+    .navbar-brand {
+      color: var(--primary-cyan) !important;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+    }
+    .nav-link {
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary-cyan) !important;
+    }
+
+    /* --- Hero Section & Typing Animation --- */
+    .hero-section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle at center, #0a1f24 0%, #000000 70%);
+    }
+
+    .typing-container {
+      display: inline-block;
+    }
+
+    .typing-text {
+      font-family: 'Courier New', monospace; /* Monospace for typing effect */
+      font-size: clamp(2rem, 5vw, 4rem); /* Responsive font size */
+      color: white;
+      overflow: hidden;
+      border-right: 3px solid var(--primary-cyan);
+      white-space: nowrap;
+      margin: 0 auto;
+      width: 0;
+      animation: typing 3.5s steps(30, end) forwards, blink .75s step-end infinite;
+    }
+
+    /* Animation Keyframes */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: var(--primary-cyan) }
+    }
+
+    /* --- About Section --- */
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid #333;
+      border-left: 5px solid var(--primary-cyan);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 234, 255, 0.1);
+    }
+    
+    .profile-img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 20px;
+      border: 3px solid var(--primary-cyan);
+      box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
+      transition: transform 0.3s;
+    }
+    .profile-img:hover {
+      transform: scale(1.02);
+    }
+    
+    .highlight {
+      color: var(--primary-cyan);
+      font-weight: 600;
+    }
+
+    /* --- Skills Section --- */
+    .skill-label {
+      color: var(--primary-cyan);
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .progress {
+      background-color: #1a1a1a;
+      height: 10px;
+      overflow: visible;
+    }
+    .progress-bar {
+      background-color: var(--primary-cyan);
+      box-shadow: 0 0 10px var(--primary-cyan);
+      position: relative;
+    }
+
+    /* --- Cards (Education & Portfolio) --- */
+    .custom-card {
+      background-color: var(--bg-card);
+      border: 1px solid #333;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .custom-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary-cyan);
+    }
+    .section-title {
+      color: var(--primary-cyan);
+      text-transform: uppercase;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0, 234, 255, 0.4);
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    /* --- Contact Section --- */
+    .contact-icon {
+      font-size: 2rem;
+      color: var(--primary-cyan);
+      margin-bottom: 10px;
+    }
+    .contact-link {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-link:hover {
+      color: var(--primary-cyan);
+    }
+
+    /* --- Buttons --- */
+    .btn-cyan {
+      color: var(--bg-dark);
+      background-color: var(--primary-cyan);
+      border: 1px solid var(--primary-cyan);
+      font-weight: 600;
+    }
+    .btn-cyan:hover {
+      background-color: transparent;
+      color: var(--primary-cyan);
+    }
+    .btn-outline-cyan {
+      color: var(--primary-cyan);
+      border: 1px solid var(--primary-cyan);
+    }
+    .btn-outline-cyan:hover {
+      background-color: var(--primary-cyan);
+      color: var(--bg-dark);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm navbar-dark fixed-top" id="Navbar">
+    <div class="container-fluid" data-bs-spy="scroll" data-bs-target="#Navbar" data-bs-offset="70">
+      <a class="navbar-brand" href="file:///C:/Users/Aarohi/OneDrive/Desktop/My_Resume.html">Siya_Verma</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link  js-scroll-trigger" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link  js-scroll-trigger" href="#About">About</a></li>
+          <li class="nav-item"><a class="nav-link  js-scroll-trigger" href="#Skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link  js-scroll-trigger" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link  js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link  js-scroll-trigger" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script type="text/javascript">
+        $('.js-scroll-trigger').click(function () {
+            $('.navbar-collapse').collapse('hide');
+        });
+    </script>
+
+
+                  <!-- HOME SECTION-->
+
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="typing-container">
+        <h1 class="typing-text">Welcome to My Profile</h1>
+      </div>
+      <p class="mt-4 fs-3">
+        Hi, I'm <span class="highlight">Siya Verma</span>.
+      </p>
+      <p class="lead text-secondary">
+        Aspiring Developer | Creative Thinker | Tech Enthusiast
+      </p>
+      <a href="#About" class="btn btn-outline-cyan btn-lg mt-4 rounded-pill px-5">Explore More</a>
+    </div>
+  </section>
+
+
+                    <!--ABOUT SECTION-->
+
+  <section id="About" class="py-5">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-5 text-center mb-4 mb-lg-0">
+          <img src="images/myproimg.png" alt="Siya Verma Profile" class="profile-img img-fluid">
+        </div>
+        <div class="col-lg-7">
+          <div class="about-card">
+            <h2 class="text-uppercase fw-bold mb-4 text-white">About Me</h2>
+            <p class="text-light">
+              Hi! Im <span class="highlight">Siya Verma</span>, a passionate 
+              <span class="highlight">BCA 1st Year Student</span> with a strong interest in 
+              web development, programming, and modern technology.  
+            </p>
+            <p class="text-light">
+              I love learning new technologies, creating beautiful UI designs, and improving my coding skills every day. 
+              My goal is to become a skilled full-stack developer and create innovative digital experiences.
+            </p>
+            <p class="text-light mb-4">
+              I enjoy working with Bootstrap, HTML, CSS, and C Programming, and Im currently exploring more advanced topics in computer applications.
+            </p>
+            <a href="file:///C:/Users/Aarohi/OneDrive/Desktop/My_Resume.html" target="_blank" class="btn btn-cyan px-4">Download Resume <i class="bi bi-download ms-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+                  <!--SKILLS SECTION-->
+
+  <section id="Skills" class="py-5 bg-black">
+    <div class="container py-5">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          
+          <div class="mb-4">
+            <span class="skill-label">HTML</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <span class="skill-label">Bootstrap Framework</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <span class="skill-label">CSS</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 80%;"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <span class="skill-label">C Programming Logic</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 70%;"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <span class="skill-label">MS Office</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 60%;"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+                  <!--EDUCATION-->
+
+  <section id="education" class="py-5">
+    <div class="container py-5">
+      <h2 class="section-title">Academic Journey</h2>
+      
+      <div class="row justify-content-center g-4">
+        
+        <div class="col-lg-10">
+          <div class="card custom-card p-3">
+            <div class="card-body">
+              <div class="d-flex justify-content-between flex-wrap align-items-center mb-3">
+                <h4 class="card-title fw-bold text-white mb-0">Bachelor of Computer Applications (BCA)</h4>
+                <span class="badge bg-info text-dark rounded-pill">Current</span>
+              </div>
+              <h6 class="text-secondary mb-3">1st Year Student</h6>
+              <ul class="list-unstyled text-light">
+                <li class="mb-2"><i class="bi bi-caret-right-fill text-info me-2"></i><strong>Core Subjects:</strong> C Programming, HTML&CSS, Web Devlopment, Ms Office.</li>
+                <li class="mb-2"><i class="bi bi-caret-right-fill text-info me-2"></i><strong>Focus:</strong> Algorithmic Thinking & Structured Programming.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-10">
+          <div class="card custom-card p-3">
+            <div class="card-body">
+              <div class="d-flex justify-content-between flex-wrap align-items-center mb-3">
+                <h4 class="card-title fw-bold text-white mb-0">Senior Secondary (12th Grade)</h4>
+                <span class="badge border border-info text-info rounded-pill">Completed 2024</span>
+              </div>
+              <h6 class="text-secondary mb-3">Science Stream (PCB)</h6>
+              <ul class="list-unstyled text-light">
+                <li class="mb-2"><i class="bi bi-caret-right-fill text-info me-2"></i><strong>Result:</strong> 79.89%</li>
+                <li class="mb-2"><i class="bi bi-caret-right-fill text-info me-2"></i><strong>Key Learning:</strong> Built a strong foundation in analytical logic.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+                  <!--PORTFOLIO-->
+
+  <section id="portfolio" class=" bg-black">
+    <div class="container-fluid p-5">
+        <h2 class="text-center mb-5 display-4 fw-bold" style="text-shadow:2px 2px 6px cyan;">My Projects</h2>
+        <div class="row g-4 justify-text-center">
+            
+            <div class=" col-lg-6 col-sm-12">
+                <div class="card project-card bg-dark border-cyan">
+                    <div class="card-body">
+                        <h5 class="card-title project-title text-cyan"><® Game Zone Platform</h5>
+                        <h6 class="card-subtitle text-muted">Web Development.</h6>
+                        <p class="card-text text-light">
+                          <strong>The games are waiting!</strong>
+                          <br/>
+                          <img src="images/1.jpg" height="200px" width="100%" class="img-fluis"/>
+
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <a href="https://aarohiverma528-beep.github.io/GAMES/"  class="btn btn-cyan-outline text-info">View Live</a>
+                            <small class="text-white-50">Bootstrap 5 | CSS</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-12" >
+                <div class="card project-card border-cyan bg-dark">
+                    <div class="card-body bg-dark">
+                        <h5 class="card-title project-title text-cyan">Lumina Design</h5>
+                        <h6 class="card-subtitle mb-2 text-cyan">Soft Architecture Renovation Company Pvt. Ltd. </h6>
+                        <p class="card-text text-light">
+                           <strong>Contruct Your Dream Property With Us. </strong>
+                            <img src="images/myindex.jpg" height="200px" width="100%"/> 
+                        </p>
+                        <div class="d-flex justify-text-center align-items-center mt-3">
+                       <a href="https://aarohiverma528-beep.github.io/design/" class="btn btn-cyan-outline text-info" target="_blank">View Live</a>
+                            <small class="text-white-50">Figma | Vanilla JS</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  </section>
+
+
+
+                          <!--CONTACT SECTION-->
+
+  <section id="contact m-5" >
+    <div class="container-fluid pe-5 m-5">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8  col-sm-8">
+          <div class="card bg-dark border border-secondary p-5 text-center shadow-lg">
+            <p class="lead text-light mb-5">
+              Have a project in mind or want to discuss the latest in tech? Feel free to reach out!
+            </p>
+            
+            <div class="row">
+              <div class="col-md-4">
+                <i class="bi bi-envelope-fill contact-icon"></i>
+                <h5 class="text-white mt-2">Email</h5>
+                <a href="mailto:aarohiverma528@gmail.com" class="contact-link small">aarohiverma528@gmail.com</a>
+              </div>
+              <div class="col-md-4">
+                <i class="bi bi-linkedin contact-icon"></i>
+                <h5 class="text-white mt-2">LinkedIn</h5>
+                <a href="#" class="contact-link small">Connect with me</a>
+              </div>
+              <div class="col-md-4">
+                <i class="bi bi-github contact-icon"></i>
+                <h5 class="text-white mt-2">GitHub</h5>
+                <a href="#" class="contact-link small">View Code</a>
+              </div>
+            </div>
+
+            <div class="mt-5">
+              <a href="mailto:aarohiverma528@gmail.com" class="btn btn-cyan rounded-pill px-5 py-2">
+                Send Message <i class="bi bi-send-fill ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black py-4 border-top border-secondary">
+    <div class="container text-center">
+      <p class="text-secondary mb-0">
+        &copy; <span id="year"></span> <strong>Siya Verma</strong>. All Rights Reserved.
+      </p>
+      <small class="text-muted">Designed with Bootstrap 5</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  
+</body>
+</html>
